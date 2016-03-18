@@ -1,0 +1,10 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?entity WHERE {
+	#{ ?entity rdf:type dbo:Comedian }
+	#{ ?entity rdf:type dbo:ComicsCreator }
+	#{ ?entity rdf:type dbo:FashionDesigner }
+	#{ ?entity rdf:type dbo:Painter } 
+	{ ?entity rdf:type dbo:Photographer }.
+}

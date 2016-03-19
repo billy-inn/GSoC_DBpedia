@@ -20,5 +20,18 @@ By querying DBpedia, we can get all the yago types of each instance.
 
 The source code can be found in ```data/<TYPE>.py```. All the instances along with features are stored in ```data/<TYPE>Feature.txt```.
 
+### Preprocess the Data
 
+In ```src/processData.py```, I process and clean the data. First, I remove all the instances with no yago type. Then, I use each yago type as features and the five dbo types as labels, whose values are all boolen. Finally, I save them into a single file ```data/data.csv```. There are 6092 instances and 5041 features in the processed dataset.
+
+### Naive SVM Approach
+
+Actually, the problem is a multi-label classification problem. However, we transform the problem to five binary classification problem. For the evaluation, we use 5-fold cross validation on our dataset.
+
+The source code can be found in ```src/svm.py```. The accuracy for each types:
+- Comedian: 0.9964
+- ComicsCreator: 0.9955
+- FashionDesigner: 0.9141
+- Painter: 0.9902
+- Photographer: 0.9432
 

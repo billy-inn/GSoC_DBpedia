@@ -35,3 +35,4 @@ The source code can be found in ```src/svm.py```. The accuracy for each types:
 - Painter: 0.9902
 - Photographer: 0.9432
 
+It seems pretty good! I think the reason here is that there are not too many types to predict. And this warm-up task can be a intermediate phase in our hierarchical classification.
